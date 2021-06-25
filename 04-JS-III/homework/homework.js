@@ -104,12 +104,12 @@ function numeroMasGrande(numeros) {
   // Tu código:
   var maximo = numeros[0]
   for (var i = 0; i < numeros.length; i++) {
-    if(numeros[i] > maximo) {
+    if (numeros[i] > maximo) {
       maximo = numeros[i];
     }
   }
   return maximo;
- }
+}
 
 
 function multiplicarArgumentos() {
@@ -167,7 +167,7 @@ function todosIguales(arreglo) {
   //retornar true, caso contrario retornar false.
   //Escribe tu código aquí  
   for (let i = 0; i < arreglo.length - 1; i++) {
-    if (arreglo[i] === arreglo[i +1]) {
+    if (arreglo[i] === arreglo[i + 1]) {
       return true
     }
   }
@@ -181,30 +181,45 @@ function mesesDelAño(array) {
   //Si alguno de los meses no está, devolver: "No se encontraron los meses pedidos"
   // Tu código:
   let nuevoArray = [];
-  for (let i = 0; i < array.length; i++) {
-    if (array[i] === 'Enero' || array[i] === 'Marzo' || array[i] === 'Noviembre') {
-      nuevoArray.push(array[i]);
+  // for (let i = 0; i < array.length; i++) {
+  // if (array[i] === 'Enero' || array[i] === 'Marzo' || array[i] === 'Noviembre') {
+  // nuevoArray.push(array[i]);
+  //}
+  //}
+  //if (nuevoArray.length < 3) {
+  //  return 'No se encontraron los meses pedidos';
+  //}
+  //else {
+  // return nuevoArray;
+  // }
+
+  for (let x of array) {
+    if (x === 'Enero' || x === 'Marzo' || x === 'Noviembre') {
+      nuevoArray.push(x);
     }
   }
   if (nuevoArray.length < 3) {
     return 'No se encontraron los meses pedidos';
-  }
-  else {
+  } else {
     return nuevoArray;
   }
 }
-
 
 function mayorACien(array) {
   //La función recibe un array con enteros entre 0 y 200. Recorrer el array y guardar en un nuevo array sólo los
   //valores mayores a 100 (no incluye el 100). Finalmente devolver el nuevo array.
   // Tu código:
   let nuevoArray = [];
-  for (let i = 0; i < array.length; i++) {
-    if (array[i] > 100)
-      nuevoArray.push(array[i])
+  //for (let i = 0; i < array.length; i++) {
+  //  if (array[i] > 100)
+  //  nuevoArray.push(array[i])
+  //}
+  //return nuevoArray;
+  for (let x of array) {
+    if (x > 100)
+      nuevoArray.push(x)
   }
-  return nuevoArray;
+  return nuevoArray
 }
 
 
@@ -221,7 +236,7 @@ function breakStatement(numero) {
     numero = numero + 2
     if (numero === i) {
       return 'Se interrumpió la ejecución'
-    }
+    } 
     nuevoArray.push(numero)
   }
   return nuevoArray

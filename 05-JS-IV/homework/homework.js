@@ -15,8 +15,6 @@ function crearGato(nombre, edad) {
   }
   return gato;
 }
-
-
 function agregarPropiedad(objeto, property) {
   // Agrega una propiedad al objeto (argumento "objeto") con el valor `null`
   // Devuelve el objeto
@@ -38,8 +36,7 @@ function multiplicarNumeroDesconocidoPorCinco(objetoMisterioso) {
   // "objetoMisterioso" tiene una propiedad llamada "numeroMisterioso"
   // Multiplica el numeroMisterioso por 5 y devuelve el producto
   // Tu código:
-  let producto = objetoMisterioso.numeroMisterioso * 5;
-  return producto;
+  return objetoMisterioso.numeroMisterioso*5;
 }
 
 function eliminarPropiedad(objeto, unaPropiedad) {
@@ -74,7 +71,6 @@ function tieneEmail(usuario) {
     return false
   }
 }
-
 
 function tienePropiedad(objeto, propiedad) {
   // Devuelve "true" si el objeto tiene el valor del argumento "propiedad"
